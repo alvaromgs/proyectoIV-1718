@@ -8,8 +8,6 @@ Se pretende realizar la implementación y despliegue de un bot de Telegram que o
 
 ### Servicios
 
-* API de Telegram
+* pyTelegramBotAPI
 * Desarrollo en Python
 * Base de datos MySQL
-* Test de integración continua con Travis CI
-* Servicio para despliegue en la nube
