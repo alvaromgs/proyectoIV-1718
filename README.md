@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/alvaromgs/proyectoIV-1718.svg?branch=master)](https://travis-ci.org/alvaromgs/proyectoIV-1718)
+
 # proyectoIV-1718
 
 ## Proyecto de Infraestructura Virtual 2017-2018
