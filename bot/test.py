@@ -26,13 +26,13 @@ class myTest(unittest.TestCase):
         self.assertTrue("Favoritas" not in getLists(), "No se ha borrado la lista")
 
     def testgetMovies(self):
-        self.assertTrue(isinstance(getMovies("Vistas"), dict), "No es un diccionario")
+        self.assertIsInstance(getMovies("Vistas"), dict, "No es un diccionario")
 
     def testgetRating(self):
-        self.assertTrue(isinstance(getRating("Vistas", "Cadena perpetua"), (int, float)), "No es un número")
+        self.assertIsInstance(getRating("Vistas", "Cadena perpetua"), (int, float), "No es un número")
 
     def testgetTime(self):
-        self.assertTrue(isinstance(getTime("Vistas"), str), "No es un string")
+        self.assertIsInstance(getTime("Vistas"), str, "No es un string")
 
     def testupdateMovie(self):
         nota = 9
