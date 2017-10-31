@@ -8,7 +8,7 @@ class myTest(unittest.TestCase):
         self.assertTrue(getLists(), "La lista está vacía")
 
     def testgetList(self):
-        self.assertTrue(isinstance(getList("Vistas"), list), "No es una lista")
+        self.assertIsInstance(getList("Vistas"), list, "No es una lista")
 
     def testaddList(self):
         pelis["Nolan"] = [
