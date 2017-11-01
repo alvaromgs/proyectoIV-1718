@@ -28,7 +28,9 @@ sudo apt-get install heroku
 
 Nos identificamos introduciendo nuestras credenciales de la cuenta de Heroku:
 
-```heroku login```
+```
+heroku login
+```
 
 Estando situados en el directorio local del repositorio de nuestro proyecto creamos la aplicación en Heroku especificando la región en la que se alojará y el nombre:
 
