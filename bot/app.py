@@ -32,4 +32,4 @@ def add():
         return "Indica la película, puntuación y la lista a la que quieras añadirla a través de los parámetros GET 'title', 'rating' y 'id' respectivamente. Ejemplo: /add?title=Gladiator&rating=8.5&id=Favoritas"
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    app.run()
