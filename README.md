@@ -38,6 +38,12 @@ Estando situados en el directorio local del repositorio de nuestro proyecto crea
 heroku create --region eu filmlists
 ```
 
+Añadimos en la raíz de nuestra aplicación un fichero llamado Procfile cuyo contenido será el comando que necesita Heroku para ponerla en marcha:
+
+```
+web: python3 bot/app.py
+```
+
 Desplegamos el código de nuestra aplicación:
 
 ```
