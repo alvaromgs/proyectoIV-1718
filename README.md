@@ -12,4 +12,8 @@ Se pretende realizar la implementación y despliegue de un bot de Telegram que o
 
 * pyTelegramBotAPI
 * Desarrollo en Python
-* Base de datos MySQL
+* PostgreSQL
+* Flask
+
+### Despliegue en Heroku
+
