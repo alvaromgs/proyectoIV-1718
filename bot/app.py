@@ -1,3 +1,4 @@
+import os
 from listas import *
 from flask import Flask, jsonify, request
 app = Flask(__name__)
@@ -32,4 +33,5 @@ def add():
         return "Indica la película, puntuación y la lista a la que quieras añadirla a través de los parámetros GET 'title', 'rating' y 'id' respectivamente. Ejemplo: /add?title=Gladiator&rating=8.5&id=Favoritas"
 
 if __name__ == '__main__':
-    app.run()
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
