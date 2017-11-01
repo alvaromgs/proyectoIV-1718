@@ -34,12 +34,18 @@ heroku login
 
 Estando situados en el directorio local del repositorio de nuestro proyecto creamos la aplicación en Heroku especificando la región en la que se alojará y el nombre:
 
-`heroku create --region eu filmlists`
+```
+heroku create --region eu filmlists
+```
 
 Desplegamos el código de nuestra aplicación:
 
-`git push heroku master`
+```
+git push heroku master
+```
 
 Y por último la ejecutamos:
 
-`heroku open`
+```
+heroku open
+```
