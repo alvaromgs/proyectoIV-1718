@@ -50,7 +50,7 @@ Desplegamos el código de nuestra aplicación:
 git push heroku master
 ```
 
-Y por último la ejecutamos:
+Y ya se encontrará desplegada. Para acceder a ella podremos hacerlo desde la URL que se haya generado o desde el terminal:
 
 ```
 heroku open
