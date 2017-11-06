@@ -1,0 +1,6 @@
+{
+  "name": "filmlists Telegram Bot",
+  "description": "Bot de Telegram para gestionar listas de peliculas",
+  "repository": "https://github.com/alvaromgs/proyectoIV-1718",
+  "keywords": ["python", "flask", "bot", "telegram"]
+}
