@@ -57,3 +57,9 @@ Y ya se encontrará desplegada. Para acceder a ella podremos hacerlo desde la UR
 ```
 heroku open
 ```
+### Rutas definidas
+
+* **/**: devuelve el json especificado en el hito 3.
+* **/listas** devuelve un json con las listas existentes.
+* **/lista** devuelve un json con el contenido de la lista solicitada. Requiere parámetro GET (acceder a la ruta para más información).
+* **/add**: añade una película a la lista indicada. Requiere parámetros GET (acceder a la ruta para más información).
