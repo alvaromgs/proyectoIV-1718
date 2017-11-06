@@ -52,7 +52,7 @@ Desplegamos el código de nuestra aplicación:
 git push heroku master
 ```
 
-Y ya se encontrará desplegada. Para acceder a ella podremos hacerlo desde la URL que se haya generado o desde el terminal:
+Para acceder a ella podremos hacerlo desde la URL que se haya generado o desde el terminal:
 
 ```
 heroku open
@@ -63,3 +63,5 @@ heroku open
 * **/listas** devuelve un json con las listas existentes.
 * **/lista** devuelve un json con el contenido de la lista solicitada. Requiere parámetro GET (acceder a la ruta para más información).
 * **/add** añade una película a la lista indicada. Requiere parámetros GET (acceder a la ruta para más información).
+
+Despliegue https://filmlists.herokuapp.com/
