@@ -57,7 +57,7 @@ Y ya se encontrará desplegada. Para acceder a ella podremos hacerlo desde la UR
 ```
 heroku open
 ```
-### Rutas definidas
+### Rutas definidas en la aplicación
 
 * **/** devuelve el json `{"status":"OK"}`.
 * **/listas** devuelve un json con las listas existentes.
