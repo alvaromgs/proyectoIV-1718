@@ -48,7 +48,7 @@ web: python3 bot/app.py
 
 Para configurar el despliegue automático asociamos la aplicación de Heroku con nuestra cuenta de GitHub:
 
-1. En nuestro *dashboard* de Heroku y dentro de la aplicación accedemos a la pestaña *Deploy*
+1. En nuestro **_dashboard_** de Heroku y dentro de la aplicación accedemos a la pestaña *Deploy*
 2. En *Deployment method* seleccionamos la opción de GitHub
 3. Conectamos la app en cuestión introduciendo las credenciales de nuestra cuenta de GitHub
 4. Indicamos el repositorio de GitHub de nuestra aplicación
