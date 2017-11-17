@@ -19,7 +19,7 @@ def lista():
         else:
             return "No se ha encontrado una lista con el id indicado"
     else:
-        return "Indica la lista que quieras consultar a través del parámetro GET 'id'. Ejemplo: /lista?id=Favoritas"
+        return "Indica la lista que quieras consultar a través del parámetro GET 'id'. test..Ejemplo: /lista?id=Favoritas"
 
 @app.route('/add')
 def add():
