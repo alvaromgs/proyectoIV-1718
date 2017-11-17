@@ -16,7 +16,7 @@ Se pretende realizar la implementación y despliegue de un bot de Telegram que o
 
 ## Despliegue en Heroku
 
-Instalamos el toolbelt de Heroku:
+Instalamos el *toolbelt* de Heroku:
 
 ```
 sudo add-apt-repository "deb https://cli-assets.heroku.com/branches/stable/apt ./"
@@ -40,23 +40,20 @@ Estando situados en el directorio local del repositorio de nuestro proyecto crea
 heroku create --region eu filmlists
 ```
 
-Añadimos en la raíz de nuestra aplicación un fichero llamado Procfile cuyo contenido será el comando que necesita Heroku para ponerla en marcha:
+Añadimos en la raíz de nuestra aplicación un fichero llamado *Procfile* cuyo contenido será el comando que necesita Heroku para ponerla en marcha:
 
 ```
 web: python3 bot/app.py
 ```
 
-Desplegamos el código de nuestra aplicación:
+Para configurar el despliegue automático asociamos la aplicación de Heroku con nuestra cuenta de GitHub:
 
-```
-git push heroku master
-```
+1. En nuestro *dashboard* de Heroku y dentro de la aplicación accedemos a la pestaña *Deploy*
+2. En *Deployment method* seleccionamos la opción de GitHub
+3. Conectamos la app en cuestión introduciendo las credenciales de nuestra cuenta de GitHub
+4. Indicamos el repositorio de GitHub de nuestra aplicación
+5. Activamos los despliegues automáticos para la rama *master* con la opción para que utilice el servicio de integración continua activada pulsando en *Enable Automatic Deploys*
 
-Para acceder a ella podremos hacerlo desde la URL que se haya generado o desde el terminal:
-
-```
-heroku open
-```
 ### Rutas definidas en la aplicación
 
 * **/** devuelve el json `{"status":"OK"}`.
