@@ -63,10 +63,20 @@ Por último, configuramos el despliegue automático asociando la aplicación de 
 
 Despliegue https://filmlists.herokuapp.com/
 
-## Despliegue en Docker
+## Despliegue en Docker Hub
 
 Una vez añadido el [Dockerfile](https://github.com/alvaromgs/proyectoIV-1718/blob/master/Dockerfile), creamos un [repositorio](https://hub.docker.com/r/alvaromgs/proyectoiv-1718) en Docker Hub y lo sincronizamos con el repositorio de GitHub. Para ello, primero sincronizamos nuestra cuenta de GitHub con Docker Hub en **Settings** > **Linked Accounts & Services** y, posteriormente, indicamos el repositorio donde está alojada nuestra aplicación en **Create** > **Create Automated Build**. Para ejecutar el contenedor desplegado:
 
 ```
 sudo docker run -p 5000:5000 -it --rm alvaromgs/proyectoiv-1718
 ```
+
+Para desplegar con Zeit instalamos **now** con:
+
+```
+npm install -g now
+```
+
+Y desplegamos el contenedor ejecutando `now` situados en el directorio del proyecto. Obtenemos la URL:
+
+Contenedor https://proyectoiv-1718-rpqvvfszzv.now.sh/
