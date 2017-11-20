@@ -65,4 +65,8 @@ Despliegue https://filmlists.herokuapp.com/
 
 ## Despliegue en Docker
 
-Una vez añadido el [Dockerfile](https://github.com/alvaromgs/proyectoIV-1718/blob/master/Dockerfile), creamos un [repositorio](https://hub.docker.com/r/alvaromgs/proyectoiv-1718) en Docker Hub y lo sincronizamos con el repositorio de GitHub. Para ello, primero sincronizamos nuestra cuenta de GitHub con Docker Hub en **Settings** > **Linked Accounts & Services** y, posteriormente, indicamos el repositorio donde está alojada nuestra aplicación en **Create** > **Create Automated Build**.
+Una vez añadido el [Dockerfile](https://github.com/alvaromgs/proyectoIV-1718/blob/master/Dockerfile), creamos un [repositorio](https://hub.docker.com/r/alvaromgs/proyectoiv-1718) en Docker Hub y lo sincronizamos con el repositorio de GitHub. Para ello, primero sincronizamos nuestra cuenta de GitHub con Docker Hub en **Settings** > **Linked Accounts & Services** y, posteriormente, indicamos el repositorio donde está alojada nuestra aplicación en **Create** > **Create Automated Build**. Para ejecutar el contenedor desplegado:
+
+```
+sudo docker run -p 5000:5000 -it --rm alvaromgs/proyectoiv-1718
+```
