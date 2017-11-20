@@ -79,4 +79,4 @@ npm install -g now
 
 Y desplegamos el contenedor ejecutando `now` situados en el directorio del proyecto. Obtenemos la URL:
 
-Contenedor https://proyectoiv-1718-rpqvvfszzv.now.sh/
+Contenedor: https://proyectoiv-1718-rpqvvfszzv.now.sh/
