@@ -62,3 +62,7 @@ Por último, configuramos el despliegue automático asociando la aplicación de 
 * **/add** añade una película a la lista indicada. Requiere parámetros GET (acceder a la ruta para más información).
 
 Despliegue https://filmlists.herokuapp.com/
+
+## Despliegue en Docker
+
+Una vez añadido el [Dockerfile](https://github.com/alvaromgs/proyectoIV-1718/blob/master/Dockerfile), creamos un repositorio en Docker Hub y lo sincronizamos con el repositorio de GitHub. Para ello, primero sincronizamos nuestra cuenta de GitHub con Docker Hub en **Settings** > **Linked Accounts & Services** y, posteriormente, indicamos el repositorio donde está alojada nuestra aplicación en **Create** > **Create Automated Build**.
