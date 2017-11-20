@@ -77,6 +77,6 @@ Para desplegar con Zeit instalamos **now** con:
 npm install -g now
 ```
 
-Y desplegamos el contenedor ejecutando `now` situados en el directorio del proyecto. Obtenemos la URL:
+Creamos nuestra cuenta en Zeit con nuestro email y desplegamos el contenedor ejecutando `now` situados en el directorio del proyecto. Obtenemos la URL:
 
 Contenedor: https://proyectoiv-1718-rpqvvfszzv.now.sh/
