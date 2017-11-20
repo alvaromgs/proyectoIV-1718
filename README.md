@@ -79,6 +79,6 @@ npm install -g now
 
 Creamos nuestra cuenta en Zeit con nuestro email y desplegamos el contenedor ejecutando `now` situados en el directorio del proyecto. Obtenemos la URL:
 
-Contenedor: https://proyectoiv-1718-rpqvvfszzv.now.sh/
+Contenedor https://proyectoiv-1718-rpqvvfszzv.now.sh/
 
 Repositorio en Docker Hub: https://hub.docker.com/r/alvaromgs/proyectoiv-1718/
