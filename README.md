@@ -92,7 +92,7 @@ Repositorio en Docker Hub: https://hub.docker.com/r/alvaromgs/proyectoiv-1718/
 az login
 ```
 
-3. Creamos un directorio en Azure para nuestra aplicación y tomamos nota de los valores `appId`, `tenant` y `password` que se incluirán en la salida del comando, ya que tendremos que indicarlas posteriormente en la configuración de la máquina virtual:
+3. Creamos un directorio en Azure para nuestra aplicación y tomamos nota de los valores `appId`, `tenant` y `password` que se incluirán en la salida del comando, ya que tendremos que indicarlos posteriormente en la configuración de la máquina virtual:
 
 ```
 az ad sp create-for-rbac
