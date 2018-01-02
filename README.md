@@ -83,6 +83,39 @@ Contenedor https://proyectoiv-1718-rpqvvfszzv.now.sh/
 
 Repositorio en Docker Hub: https://hub.docker.com/r/alvaromgs/proyectoiv-1718/
 
-## Despliegue en azure
+## Despliegue en Azure
+
+1. Instalamos el [CLI de Azure](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) para trabajar con esta plataforma desde línea de comandos
+2. Nos identificamos con nuestra cuenta de Azure:
+
+```
+az login
+```
+
+3. Creamos un directorio en Azure para nuestra aplicación y tomamos nota de los valores `appId`, `tenant` y `password` que se incluirán en la salida del comando, ya que tendremos que indicarlas posteriormente en la configuración de la máquina virtual:
+
+```
+az ad sp create-for-rbac
+```
+
+4. Obtenemos nuestro id de suscripción de Azure:
+
+```
+az account list --query "[?isDefault].id" -o tsv
+```
+
+5. Para aprovisionar nuestra máquina utilizaremos Ansible, por lo que será necesario crear un fichero o [*playbook*](https://github.com/alvaromgs/proyectoIV-1718/blob/master/provision/filmlists.yml) que contendrá las tareas que se deben ejecutar para instalar lo necesario en la máquina virtual.
+
+6. Creamos un [**Vagrantfile**](https://github.com/alvaromgs/proyectoIV-1718/blob/master/Vagrantfile) en el que definiremos la configuración de la máquina virtual, desde los puertos que va a utilizar hasta el aprovisionamiento de la misma. También tendremos que incluir en este fichero información relativa a la plataforma en la que se va a desplegar la máquina, como los valores mencionados en el punto 3. Arrancaremos la máquina virtual con:
+
+```
+vagrant up --provider=azure
+```
+
+7. Por último, definimos un [fichero de despliegue](https://github.com/alvaromgs/proyectoIV-1718/blob/master/despliegue/fabfile.py) usando Fabric. Gracias a este fichero podremos ejecutar tareas en la máquina de forma remota, por ejemplo, para iniciar la aplicación:
+
+```
+fab -H vagrant@filmlists.westeurope.cloudapp.azure.com start
+```
 
 Despliegue final: filmlists.westeurope.cloudapp.azure.com
