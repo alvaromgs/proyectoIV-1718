@@ -82,3 +82,7 @@ Creamos nuestra cuenta en Zeit con nuestro email y desplegamos el contenedor eje
 Contenedor https://proyectoiv-1718-rpqvvfszzv.now.sh/
 
 Repositorio en Docker Hub: https://hub.docker.com/r/alvaromgs/proyectoiv-1718/
+
+## Despliegue en azure
+
+Despliegue final: filmlists.westeurope.cloudapp.azure.com
