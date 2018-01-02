@@ -1,0 +1,19 @@
+---
+- hosts: all
+  sudo: yes
+  remote_user: vagrant
+  tasks:
+    - name: Update apt cache
+      apt: update_cache=yes
+
+    - name: Install pip3
+      apt: pkg=python3-pip state=present
+
+    - name: Install Git
+      apt: pkg=git state=present
+
+    - name: Clone GitHub repository
+      git: repo=https://github.com/alvaromgs/proyectoIV-1718 dest=/home/vagrant/proyectoIV-1718
+
+    - name: Install requirements
+      command: pip3 install -r /home/vagrant/proyectoIV-1718/requirements.txt
