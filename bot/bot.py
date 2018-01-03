@@ -1,7 +1,7 @@
 import telebot
 from listas import *
 
-TOKEN = ""
+TOKEN = "514563961:AAH4G5EC0Cta6KNvvGQZpx2QJGCL2e-2uFA"
 bot = telebot.TeleBot("TOKEN")
 
 @bot.message_handler(commands=['start', 'help'])
