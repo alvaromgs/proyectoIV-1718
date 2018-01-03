@@ -47,6 +47,7 @@ def renameList(lista, newname):
 def removeList(lista):
     if lista in pelis:
         del pelis[lista]
+        return True
     else:
         return False
 
@@ -83,5 +84,6 @@ def removeMovie(lista, peli):
     if lista in pelis:
         del pelis[lista][0][peli]
         updateTime(lista)
+        return True
     else:
         return False
