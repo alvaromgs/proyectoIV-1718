@@ -1,13 +1,23 @@
 import time
-import shelve
+
+pelis = {
+            "Favoritas": [
+            {"Blade Runner": 7, "Pulp Fiction": 8},
+            time.strftime("%d/%m/%Y %H:%M")
+            ]
+        ,
+            "Pendientes": [
+            {"El padrino": 9, "Uno de los nuestros": 10},
+            time.strftime("%d/%m/%Y %H:%M")
+            ]
+        }
+
+pelis["Vistas"] =   [
+                        {"Cadena perpetua": 7, "El caballero oscuro": 8},
+                        time.strftime("%d/%m/%Y %H:%M")
+                    ]
 
 def getLists():
-    lists = shelve.open('lists.db')
-    pelis = {}
-    for k,v in lists.items():
-        pelis[k] = v
-    lists.close()
-
     return pelis
 
 def getList(lista):
@@ -18,92 +28,59 @@ def getList(lista):
     #     print ("")
     # else:
     #     print ("No existe esa lista\n")
-    lists = shelve.open('lists.db')
 
-    if lista in lists:
-        l = lists[lista]
-        lists.close()
-        return l
+    if lista in pelis:
+        return pelis[lista]
     else:
-        lists.close()
         return False
 
 def addList(name):
-    lists = shelve.open('lists.db')
-    lists[name] = [{}, time.strftime("%d/%m/%Y %H:%M")]
-    lists.close()
+    pelis[name] = [{}, time.strftime("%d/%m/%Y %H:%M")]
 
 def renameList(lista, newname):
-    lists = shelve.open('lists.db')
-    if lista in lists:
-        lists[newname] = lists[lista]
-        del lists[lista]
-        lists.close()
+    if lista in pelis:
+        pelis[newname] = pelis.pop(lista)
         updateTime(newname)
     else:
-        lists.close()
         return False
 
 def removeList(lista):
-    lists = shelve.open('lists.db')
-    if lista in lists:
-        del lists[lista]
-        lists.close()
+    if lista in pelis:
+        del pelis[lista]
     else:
-        lists.close()
         return False
 
 def getMovies(lista):
-    lists = shelve.open('lists.db')
-    if lista in lists:
-        pelis = lists[lista][0]
-        lists.close()
-        return pelis
+    if lista in pelis:
+        return pelis[lista][0]
     else:
-        lists.close()
         return False
 
 def getRating(lista, peli):
-    lists = shelve.open('lists.db')
-    if lista in lists:
-        peli = lists[lista][0][peli]
-        lists.close()
-        return peli
+    if lista in pelis:
+        return pelis[lista][0][peli]
     else:
-        lists.close()
         return False
 
 def getTime(lista):
-    lists = shelve.open('lists.db')
-    if lista in lists:
-        time = lists[lista][1]
-        lists.close()
-        return time
+    if lista in pelis:
+        return pelis[lista][1]
     else:
-        lists.close()
         return False
 
 def updateMovie(lista, peli, nota):
-    lists = shelve.open('lists.db')
-    if lista in lists:
-        lists[lista][0][peli] = nota
-        lists.close()
+    if lista in pelis:
+        pelis[lista][0][peli] = nota
         updateTime(lista)
     else:
-        lists.close()
         return False
 
 def updateTime(lista):
-    lists = shelve.open('lists.db')
-    lists[lista][1] = time.strftime("%d/%m/%Y %H:%M")
-    lists.close()
+    pelis[lista][1] = time.strftime("%d/%m/%Y %H:%M")
 
 def removeMovie(lista, peli):
-    lists = shelve.open('lists.db')
-    if lista in lists:
-        del lists[lista][0][peli]
-        lists.close()
+    if lista in pelis:
+        del pelis[lista][0][peli]
         updateTime(lista)
     else:
-        lists.close()
         return False
