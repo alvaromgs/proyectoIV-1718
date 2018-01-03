@@ -12,4 +12,5 @@ def update():
     run("pip3 install -r /home/vagrant/proyectoIV-1718/requirements.txt")
 
 def start():
+    run("python3 /home/vagrant/proyectoIV-1718/bot/bot.py")
     run("sudo python3 /home/vagrant/proyectoIV-1718/bot/app.py")
