@@ -1,4 +1,5 @@
 import time
+import shelve
 
 pelis = {
             "Favoritas": [
@@ -18,7 +19,24 @@ pelis["Vistas"] =   [
                     ]
 
 def getLists():
-    return pelis
+    #return pelis
+    lists = shelve.open('lists.db')
+
+    resp = ""
+
+    for k,v in lists.items():
+	    resp += k
+	    resp += '\n\n'
+	    for k2,v2 in v[0].items():
+	        resp += k2
+	        resp += ' '
+	        resp += str(v2)
+	        resp += '\n'
+	    resp += '____________\n\n'
+
+    print(resp)
+
+    lists.close()
 
 def getList(lista):
     # if list in pelis:
