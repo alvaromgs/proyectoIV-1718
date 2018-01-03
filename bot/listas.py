@@ -72,6 +72,7 @@ def updateMovie(lista, peli, nota):
     if lista in pelis:
         pelis[lista][0][peli] = nota
         updateTime(lista)
+        return True
     else:
         return False
 
