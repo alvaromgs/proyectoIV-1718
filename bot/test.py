@@ -11,10 +11,7 @@ class myTest(unittest.TestCase):
         self.assertIsInstance(getList("Vistas"), list, "No es una lista")
 
     def testaddList(self):
-        pelis["Nolan"] = [
-                             {"Origen": 9, "Memento": 10},
-                             time.strftime("%d/%m/%Y %H:%M")
-                         ]
+        addList("Nolan")
         self.assertTrue("Nolan" in getLists(), "No se ha añadido la lista")
 
     def testrenameList(self):
@@ -33,21 +30,6 @@ class myTest(unittest.TestCase):
 
     def testgetTime(self):
         self.assertIsInstance(getTime("Vistas"), str, "No es un string")
-
-    def testupdateMovie(self):
-        nota = 9
-        updateMovie("Vistas", "Cadena perpetua", nota)
-        updateMovie("Vistas", "El truco final", nota)
-        self.assertTrue(getRating("Vistas", "Cadena perpetua") == nota, "No se ha actualizado la puntuación")
-        self.assertTrue("El truco final" in getMovies("Vistas"), "No se ha añadido la película")
-
-    def testupdateTime(self):
-        updateTime("Vistas")
-        self.assertTrue(getTime("Vistas") == time.strftime("%d/%m/%Y %H:%M"), "No se ha actualizado la fecha de modificación de la lista")
-
-    def testremoveMovie(self):
-        removeMovie("Vistas", "Cadena perpetua")
-        self.assertTrue("Cadena perpetua" not in getMovies("Vistas"), "No se ha borrado la película")
 
 if __name__ == '__main__':
     unittest.main()
